@@ -14,16 +14,14 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    // BUMM! Itt a javítás: Teljesen kivettük az overflow-x-hidden-t!
-    <main className="relative min-h-screen flex flex-col bg-[#030508]">
+    // BUMM: overflow-clip és w-full a megmentőnk!
+    <main className="relative min-h-screen flex flex-col bg-[#030508] overflow-clip w-full">
       
       <Navbar />
 
-      {/* Prémium Ambient Világítás a háttérben */}
       <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-600/20 blur-[150px] rounded-full pointer-events-none z-0 animate-ambient"></div>
       <div className="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none z-0 animate-ambient" style={{ animationDelay: '3s' }}></div>
 
-      {/* Hero Szekció */}
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 max-w-5xl mx-auto pt-20">
         
         <motion.div 
@@ -70,31 +68,15 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Glassmorphism Bento Grid Szekció */}
       <Features />
-
-      {/* Szolgáltatások / Képességek Listája */}
       <Services />
-
-      {/* Portfólió Szekció a kőkemény aszimmetrikus kártyákkal */}
       <Portfolio />
-
-      {/* Élő, OpenAI-meghajtású Architektúra Tervező Terminál */}
       <AiArchitect />
-
-      {/* Rólunk / Az Ökoszisztéma Szekció */}
       <Ecosystem />
-
-      {/* Lab Notes Előnézet / Trailer Szekció a főoldalon */}
       <LabNotesPreview />
-
-      {/* SEO / AEO optimalizált Filozófia és GYIK Szekció */}
       <Faq />
 
-      {/* Spacer a Footer előtt */}
       <div className="h-32 w-full"></div>
-
-      {/* High-End Footer */}
       <Footer />
 
     </main>

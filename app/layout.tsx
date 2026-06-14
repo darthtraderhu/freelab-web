@@ -29,18 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="hu" className="scroll-smooth">
-      {/* BUMM! Itt a javítás: a legvégére bekerült az overflow-x-hidden! */}
-      <body className={`${spaceGrotesk.variable} ${outfit.variable} font-sans bg-[#030508] text-white antialiased select-none overflow-x-hidden`}>
+    <html lang="hu">
+      {/* Teljesen letisztított body tag az Apple bug kikerülésére */}
+      <body className={`${spaceGrotesk.variable} ${outfit.variable} font-sans bg-[#030508] text-white antialiased select-none`}>
         
-        <Shield />         {/* A láthatatlan páncél */}
-        <Preloader />      {/* A betöltőképernyő */}
-        <CustomCursor />   {/* Az egyedi egér */}
-        <FloatingCall />   {/* Az új, lüktető hívás gomb */}
+        <Shield />         
+        <Preloader />      
+        <CustomCursor />   
+        <FloatingCall />   
         
         {children}
 
-        {/* A láthatatlan GA4 nyomkövető */}
         <GoogleAnalytics gaId="G-BJ358J2S3D" />
       </body>
     </html>
