@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Features from '../components/Features';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
-import AiArchitect from '../components/AiArchitect'; // <--- ÚJ INTEGRÁCIÓ: AI Tervező Terminál
+import AiArchitect from '../components/AiArchitect'; 
 import Ecosystem from '../components/Ecosystem';
 import LabNotesPreview from '../components/LabNotesPreview';
 import Faq from '../components/Faq';
@@ -14,8 +14,8 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    // BUMM! Itt a javítás: overflow-hidden helyett overflow-x-hidden lett!
-    <main className="relative min-h-screen flex flex-col overflow-x-hidden bg-[#030508]">
+    // BUMM! Itt a javítás: Teljesen kivettük az overflow-x-hidden-t!
+    <main className="relative min-h-screen flex flex-col bg-[#030508]">
       
       <Navbar />
 

@@ -6,7 +6,7 @@ import "./globals.css";
 import CustomCursor from "../components/CustomCursor";
 import Preloader from "../components/Preloader"; 
 import Shield from "../components/Shield";       
-import FloatingCall from "../components/FloatingCall"; // <--- ÚJ IMPORT: Lebegő hívás gomb
+import FloatingCall from "../components/FloatingCall"; 
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"], 
@@ -30,8 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu" className="scroll-smooth">
-      {/* select-none: Szövegkijelölés letiltása! */}
-      <body className={`${spaceGrotesk.variable} ${outfit.variable} font-sans bg-[#030508] text-white antialiased select-none`}>
+      {/* BUMM! Itt a javítás: a legvégére bekerült az overflow-x-hidden! */}
+      <body className={`${spaceGrotesk.variable} ${outfit.variable} font-sans bg-[#030508] text-white antialiased select-none overflow-x-hidden`}>
         
         <Shield />         {/* A láthatatlan páncél */}
         <Preloader />      {/* A betöltőképernyő */}
