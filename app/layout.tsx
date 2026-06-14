@@ -1,11 +1,12 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Space_Grotesk, Outfit } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google'; // <--- ÚJ IMPORT: Google Analytics
+import { GoogleAnalytics } from '@next/third-parties/google'; 
 import "./globals.css";
 import CustomCursor from "../components/CustomCursor";
 import Preloader from "../components/Preloader"; 
 import Shield from "../components/Shield";       
+import FloatingCall from "../components/FloatingCall"; // <--- ÚJ IMPORT: Lebegő hívás gomb
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"], 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Shield />         {/* A láthatatlan páncél */}
         <Preloader />      {/* A betöltőképernyő */}
         <CustomCursor />   {/* Az egyedi egér */}
+        <FloatingCall />   {/* Az új, lüktető hívás gomb */}
         
         {children}
 
