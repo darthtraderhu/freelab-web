@@ -14,13 +14,14 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    // BUMM: overflow-clip és w-full a megmentőnk!
-    <main className="relative min-h-screen flex flex-col bg-[#030508] overflow-clip w-full">
+    // Teljesen letisztított main tag
+    <main className="relative min-h-screen flex flex-col bg-[#030508]">
       
       <Navbar />
 
-      <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-600/20 blur-[150px] rounded-full pointer-events-none z-0 animate-ambient"></div>
-      <div className="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none z-0 animate-ambient" style={{ animationDelay: '3s' }}></div>
+      {/* BUMM! Itt a javítás: hidden md:block - Mobilon kikapcsoljuk az iPhone GPU hibája miatt! */}
+      <div className="hidden md:block fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-indigo-600/20 blur-[150px] rounded-full pointer-events-none z-0 animate-ambient"></div>
+      <div className="hidden md:block fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none z-0 animate-ambient" style={{ animationDelay: '3s' }}></div>
 
       <section className="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 max-w-5xl mx-auto pt-20">
         

@@ -4,7 +4,7 @@ import { Space_Grotesk, Outfit } from "next/font/google";
 import { GoogleAnalytics } from '@next/third-parties/google'; 
 import "./globals.css";
 import CustomCursor from "../components/CustomCursor";
-import Preloader from "../components/Preloader"; 
+// import Preloader from "../components/Preloader"; // <-- BUMM! Kikapcsolva az import
 import Shield from "../components/Shield";       
 import FloatingCall from "../components/FloatingCall"; 
 
@@ -30,11 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="hu">
-      {/* Teljesen letisztított body tag az Apple bug kikerülésére */}
       <body className={`${spaceGrotesk.variable} ${outfit.variable} font-sans bg-[#030508] text-white antialiased select-none`}>
         
         <Shield />         
-        <Preloader />      
+        {/* <Preloader /> */}{/* <-- BUMM! Kikapcsolva a betöltőképernyő, azonnali renderelés! */}
         <CustomCursor />   
         <FloatingCall />   
         
