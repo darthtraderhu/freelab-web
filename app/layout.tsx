@@ -1,10 +1,11 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Space_Grotesk, Outfit } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google'; // <--- ÚJ IMPORT: Google Analytics
 import "./globals.css";
 import CustomCursor from "../components/CustomCursor";
-import Preloader from "../components/Preloader"; // <--- ÚJ
-import Shield from "../components/Shield";       // <--- ÚJ
+import Preloader from "../components/Preloader"; 
+import Shield from "../components/Shield";       
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"], 
@@ -36,6 +37,9 @@ export default function RootLayout({
         <CustomCursor />   {/* Az egyedi egér */}
         
         {children}
+
+        {/* A láthatatlan GA4 nyomkövető */}
+        <GoogleAnalytics gaId="G-BJ358J2S3D" />
       </body>
     </html>
   );
