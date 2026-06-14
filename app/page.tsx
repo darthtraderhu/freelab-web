@@ -14,7 +14,8 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col overflow-hidden bg-[#030508]">
+    // BUMM! Itt a javítás: overflow-hidden helyett overflow-x-hidden lett!
+    <main className="relative min-h-screen flex flex-col overflow-x-hidden bg-[#030508]">
       
       <Navbar />
 
